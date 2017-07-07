@@ -1,0 +1,408 @@
+For Explantion 
+http://www.newthinktank.com/2014/11/python-programming/
+For Youtube Video
+https://www.youtube.com/watch?v=N4mEzFDjqtA
+Python Download
+
+https://www.python.org/downloads/
+
+Then Download python 3.6.1
+
+C:\Users\v-venchu\AppData\Local\Programs\Python\Python36-32\Scripts\
+
+C:\\Users\\v-venchu\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe
+***************Python datatypes*********
+python is case sensitive
+
+minimunm packages 
+import random
+import sys
+import os
+
+
+type("asdf") or type('sadf') or type('a')= string
+type(12312)= int
+type(12312.34)= float
+type(FALSE) or type(true) = error
+type(False) or type(True) = bool
+
+to print comething on console
+Print("sadf") or PRINT("sdfs") = error
+print("Hi") or directly we can check by typing "Hi" or variable Name
+
+*************To clear the screan and exit************
+For Exit from the console
+quit()
+
+For clear screan
+>>import os
+>>clear = lamda: os.system('cls')
+>>clear()
+
+*************For Comments******************************
+single line comments
+#this is single line comment
+multi line comments with 3 single quotes
+''' this is multi line comments
+can be written in multiple
+lines '''
+
+************ For arithmetic*************************
+print(2.2+4) =6.2 # here type is maintained
+print(5*2) =10
+print(5**2) =25 # here 5 square 2 is 25
+print(5**3)=125 
+# to get the integer value from the expression
+print(5/2) =2.5 or sometimes 2 mostly if not
+print(5//2) = 2
+************Variable Declaration***********************
+If you want to know the all keywords used in Python then
+>>> import keyword
+>>> keyword.kwlist
+The Variable we declare is should not be the predefined one
+
+num1=10
+myString="Rama"
+
+Multiple Variable with same value
+num1=num2=num3=10
+Multiple Variable with Different Values
+num1, myString, flag, num2=10,"Rama",True,10.5
+
+***********Type Conversion*****************
+
+In Python typecasting will be done internally
+ex: num1=5, mystring="RAMA"
+num1=mystring then o/p is num1=mystring="RAMA"
+now the type of num1 is string
+
+***************String Manipulation****************
+myName="venkatesh"
+friendName="RAMA"
+myName+" "+ friendName= venkatesh RAMA
+if we want to print the same string multiple times 
+
+5* friendName =RAMARAMARAMARAMARAMA
+
+len("RAMA")=4
+"RAMA"[0]=R
+"RAMA"[-1]=A
+"RAMA"[0:2]=RAM
+"RAMA"[1:]=AMA
+
+if want to print last 2 chars
+
+"RAMA"[-2:]
+"RAMA"[:-2]
+
+For char %c for string %s for number %d 
+
+print("%c is my %s letter and my Numer %D number is %.5f" % 
+('X','favorite',1,.14))
+
+o/p: X is my favorite letter and my Number 1 number is 0.14000 
+
+5 decimals bcz we mentioned 5f
+
+to make first letter capital in string
+
+my_string.capitalize()
+ this 
+index value of the string in long string
+long_string= I will catch you in the Floor
+print(long_string.find("Floor"))
+
+long_string.isalpha()
+long_string.isalnum()
+len(long_string)
+long_string.replace("Floor","Ground")
+long_string.strip()# to remove the white spaces
+# to split  the word
+long_string.split(" ")#this will return list
+
+********** Lists ************
+grocery_List=["kukumber","bananas",23,2.03,
+              "Juice"]
+grocery_List[0]=greenJuice
+print(grocery_List[1:3]) o/p: bananas 23
+
+other_list=["car","bike","machine"]
+#list inside the list
+to_do_list=[other_list, grocery_list]
+print(to_do_list)
+#Acccessing first item 
+print(to_do_list[0][1])
+print(to_do_list[0][2])
+print(to_do_list[0][3])
+for second list use index 1
+
+For insterting the element in end of the list
+grocery_list.append("Onions")
+
+For Inserting the element at the specific index
+grocery_list.insert(1,"Onions")
+
+For remove element in the list
+grocery_list.remove("Onions")
+
+For sorting the list
+grocery_list.sort()
+
+For reverse sort the list
+grocery_list.reverse()
+
+Delete the element at specific index
+del grocery_list[3]
+
+for checking the length of list
+len(grocery_list)
+
+to get the max and min length items
+max(grocery_list)
+min(grocery_list)
+
+************************Tuples***************
+
+Tuples are like list but it cannot be changed once it has created
+
+pi_tuple=(2,4,5,6,7)
+
+to make changes to tuple we must convert that to list and do the changes and convert it back to tuple
+# conveting tuple to list
+new_list=list(pi_tuple)
+# converting list to tuple
+new_tuple=tuple(new_list)
+# to get the length of tuple 
+len(new_tuple)
+# for min and Max
+min(new_tuple)
+max(new_tuple)
+
+******************Dictionary*****************
+key and value pair, which is uniq
+
+super_Heros={"RAMA": "World",
+"Krishana": "Bharath",
+"Arjuna" : "kurukshethra"
+"Anjaneya" : "Stronger"
+}
+
+key is RAMA and value is World
+super_Heros['RAMA'] o/p:world
+
+to get the value
+super_Heros.get("RAMA")
+
+to get the list of keys in the dictionary
+super_Heros.keys()
+
+to get the list of values in the dictionary
+super_Heros.values()
+
+To delete
+del super_Heros["RAMA"]
+
+replace the value of the key
+super_Heros["Anjaneya"]="Strongest" 
+
+to get the length
+len(super_Heros)
+
+********************Conditionals operators****************
+   	
+age =21
+
+if age >= 21 :
+      print("you can drive anything")
+elif age >=16 :
+      print("you can drive a car")
+else :
+      print("you are not eligible")
+
+logical operators and or not
+
+if((age>=1) and (age<=18)):
+    print("you get a birthday")
+elif(age==21) or (age >=65)
+   print ("you are not ")
+elif not(age==30):
+   print("you dont get a birthday")
+else:
+   print("you will get the party yeah")
+
+******************Looping*************** 
+
+for loop
+
+for x in range(0,10):
+    print(x, '', end="")
+
+print('\n')
+
+for y in grocery_list:
+    print(y)
+
+for x in [2,3,4,5,6]:
+    print(x)
+
+num_list=[[1,2,3], [10,20,30], [20,40,70]]
+
+for x in range(0,3):
+    for y in range(0,3):
+        print(num_list[x][y])
+
+While loop
+
+random_num=random.randrange(0,100)
+
+while(random_num!=15):
+   print(random_num)
+   random_num=random.randrange(0,100) 
+
+
+i=0;
+
+while(i<=20):
+	if(i%2==0):
+	   print(i)
+	elif(i==9):
+	   break
+	else:
+	   i+=1 
+ 	   continue
+   	
+        i+=1
+
+*********** Defining functions or methods ************
+
+def addNumber(fNum,sNum):
+     sumNum=fNum+sNum
+     return sumNum
+
+totalOfNum=addNumber(1,4)
+
+******** get input from user*******
+
+print("WHat is your Name")
+name=sys.stdin.readline()
+print("hello", name)
+
+*********************** IO Operations ****************
+
+If you want to open or create a file
+
+# to open and write into files or create new one
+test_file=open("firstFile.txt","wb")
+# to check the mode of the file whether it is in writing or reading
+print(test_file.mode)
+#to check the file name
+print(test_file.name)
+# to write into files
+test_file.write(bytes("write me to the file \n",'UTF-8'))
+# to close the file
+test_file.close()
+
+
+##### to read the file
+
+text_in_file=test_file.read()
+print(text_in_file)
+
+# to delet the file 
+
+os.remove("test.txt")   
+
+
+********************* Objects ************
+
+2 underscore means those are private attributes
+class Animal:
+      __name=None # these are called as attributes we use 2 _(under score)
+      __height =0 
+      __weight= 0
+      __sound =0
+	
+#  construcors is to intialise an object
+	def __init__(self, name, height, weight. sound):
+		self.__name=name
+		self.__height=height
+		self.__weight=weight
+		self.__sound=sound
+
+# we can set and get the private varibles by doing below
+	def set_name(self, name)
+ 	    self.__name=name #self is like a this keyword
+
+	def get_name(self):
+     	    return self.__name
+
+# Have to write setter and getter for all attributes then
+
+	def get_type(self):
+	    Print("Animal")
+
+	def toString(self):
+	    return "{} is {} cm tall and {} killograms and say {}".format(self.__name=name,
+		self.__height=height,
+		self.__weight=weight,
+		self.__sound=sound)
+
+# to create an object of type Animal
+cat= Animal("Whiskars",33,10,'Meow')
+
+print(cat.toString())
+
+
+#this is called encapsulation
+
+************Inheritance
+
+class Dog(Animal):
+	__owner=""
+
+	def __init__(self, name, height, weight. sound,owner):
+		self.__owner=owner
+		super(Dog, self).__init__(name, height, weight. sound)
+
+	def set_owner(self)
+		self.__owner=owner
+	
+	def get_owner(self)
+		return self.__owner
+
+	def get_type(self)
+		print("Dog")
+
+# Method Overriding
+	def toString(self):
+	    return "{} is {} cm tall and {} killograms and say {} and the owner is {} ".format(self.__name=name,
+		self.__height=height,
+		self.__weight=weight,
+		self.__sound=sound,
+		self.__owner=owner)
+
+# Method over loading
+#optional paramenters can be set like a None
+	def multiple_sounds(self, how_many=None):
+		if how_many is None:
+			print(self.get_sound())
+		else:
+			print(self.get_sound() * how_many)
+
+spot=Dog("Spot",53,27,"ruff","Derek")
+
+print(spot.toString()	
+
+**************** PolyMorphism *********
+
+class AnimalTesting:
+	def get_type(self, animal):
+		animal.get_type()
+
+test_animals=AnimalTesting()
+
+test_animals.get_type(cat)  # o/p as Animal
+test_animals.get_type(spot) $ o/p as Dog
+
+spot.multiple_sounds(4)
+spot.multiple_sounds()
